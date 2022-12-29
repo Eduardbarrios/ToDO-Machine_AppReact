@@ -1,10 +1,13 @@
 import React from 'react';
+import { TodoProvider } from '../contex/contex';
 import { AppUI } from './AppUI';
 import './App.css';
 
 function App() {
   return (
-    <AppU/>
+    <TodoProvider>
+      <AppUI/>
+    </TodoProvider>
   );
 }
 

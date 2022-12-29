@@ -1,0 +1,79 @@
+.todo-item{
+ display: flex;
+ position: relative;
+ background-color: var(--todo-card-color);
+ margin: 10px;
+ padding: 5px;
+ height: 50px;
+ cursor:default;
+}
+.title{
+ font-size: 2rem;
+ margin-left: 5px;
+ align-self: center;
+}
+.title.completed{
+ text-decoration: line-through;
+}
+.description{
+ font-size: 1.5rem;
+ display: none;
+}
+.check{
+ width: 30px;
+ height: 30px;
+ background-image: url(../assets/cuadro_check.svg);
+ background-size: contain;
+ background-repeat: no-repeat;
+ align-self: center;
+ cursor: pointer;
+}
+.check.completed{
+ background-image: url(../assets/check_on.svg);
+ 
+}
+.detail{
+ width: 20px;
+ height: 20px;
+ position: absolute;
+ background-image: url(../assets/down.svg);
+ background-size: contain;
+ background-repeat: no-repeat;
+ align-self: center;
+ right: 10px;
+ cursor: pointer;
+}
+
+/*si se activa el boton de ver detalles*/
+
+.item-detail{
+ height: 100px;
+}
+.check-detail{
+ align-self: flex-start;
+}
+.title-detail{
+ align-self: flex-start;
+}
+.delete-detail{
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ background-image: url(../assets/delete.svg);
+ background-size: contain;
+ background-repeat: no-repeat;
+ right: 10px;
+ bottom: 10px;
+ cursor: pointer;
+}
+.detailon{
+ align-self: flex-start;
+ transform: rotate(180deg);
+}
+.descrp-detail{
+ display: flex;
+ position: absolute;
+ top: 40px;
+ width: 90%;
+ max-height: 50px;
+}

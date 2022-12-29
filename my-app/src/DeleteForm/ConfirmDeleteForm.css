@@ -1,0 +1,36 @@
+.confirm-section{
+ display: flex;
+ position: relative;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ background-color: white;
+ border-radius: 10px;
+ cursor: default;
+}
+.pDelete{
+ align-self: center;
+ font-size: 1.5rem;
+}
+.alert{
+ width: 30px;
+ height: 30px;
+ background: url(../assets/caution.svg) no-repeat;
+ background-size: contain;
+ align-self: center;
+}
+.cancel{
+ width: 30%;
+ position: absolute;
+ bottom: 5px;
+ right: 72px;
+ cursor: pointer;
+}
+.confirm{
+ width: 32%;
+ position: absolute;
+ bottom: 5px;
+ right: 5px;
+ cursor: pointer;
+}
+
