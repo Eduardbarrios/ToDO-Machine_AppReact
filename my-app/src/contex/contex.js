@@ -1,26 +1,17 @@
 import React from "react";
+import { useLocalStorage } from "../hooks/LocalStorage";
 
 const Contex = React.createContext();
 function TodoProvider(props){
-  const todosDefault = [
-    {title: 'sacar la basura',
-     description: 'sacar la basura porque es jueves',
-     completed: true,
-     delete:false,
-    },
-   {title: 'terminar la app',
-    description: 'terminar mi app porque la borré',
-    completed: false,
-    delete:false,
-   },
-   {title: 'seguir estudiando',
-    description: 'luego de terminar la app seguir con los curos',
-    completed: false,
-    delete:false,
-   }
-   ]
-   const [todos, setTodos] = React.useState(todosDefault)
 
+ 
+   const {
+    item: todos,
+    saveItem: saveTodos
+          } = useLocalStorage('TODOS_V1', []);
+
+
+    
    //TodoCounter
    const completedTodos = todos.filter(todo=>(todo.completed)).length
    const total = todos.length
@@ -40,23 +31,23 @@ function TodoProvider(props){
    }
    //TodoItem
    const togleCompletedTodo = (todoTitle)=>{
-    const todoIndex = todos.findIndex((todo)=>todo.title == todoTitle);
+    const todoIndex = todos.findIndex((todo)=>todo.title === todoTitle);
     const newTodos = [...todos];
     if(!newTodos[todoIndex].completed){
       newTodos[todoIndex].completed = true;
     }
     else{
       newTodos[todoIndex].completed = false}
-    setTodos(newTodos)
+    saveTodos(newTodos)
    }
    //delete Todos 
    const [deleteModalOn, setDeleteModalOn] = React.useState(false)
 
    const togledeleteTodo = (todoTitle)=>{
-    const todoIndex = todos.findIndex((todo)=>todo.title == todoTitle);
+    const todoIndex = todos.findIndex((todo)=>todo.title === todoTitle);
     const newTodos = [...todos];
     newTodos[todoIndex].delete = true;
-    setTodos(newTodos)
+    saveTodos(newTodos)
     setDeleteModalOn(true)
     const modal = document.getElementById('confirm-modal');
     if(!deleteModalOn){
@@ -68,10 +59,10 @@ function TodoProvider(props){
    }
 
    const DeleteConfirmed = ()=>{
-    const todoIndex = todos.findIndex((todo)=>todo.delete == true);
+    const todoIndex = todos.findIndex((todo)=>todo.delete === true);
     const newTodos = [...todos];
     newTodos.splice(todoIndex,1)
-    setTodos(newTodos)
+    saveTodos(newTodos)
     setDeleteModalOn(false)
     const modal = document.getElementById('confirm-modal');
     if(!deleteModalOn){
@@ -83,10 +74,10 @@ function TodoProvider(props){
     
    }
    const DeleteCanceled = ()=>{
-    const todoIndex = todos.findIndex((todo)=>todo.delete == true);
+    const todoIndex = todos.findIndex((todo)=>todo.delete === true);
     const newTodos = [...todos];
     newTodos[todoIndex].delete = false;
-    setTodos(newTodos)
+    saveTodos(newTodos)
     setDeleteModalOn(false)
     const modal = document.getElementById('confirm-modal');
     if(!deleteModalOn){
@@ -119,7 +110,7 @@ function TodoProvider(props){
       completed: false,
       delete: false
     });
-    setTodos(newTodos);
+    saveTodos(newTodos);
     setTitleValue('');
     setDescriptionValue('');
     addTogle()

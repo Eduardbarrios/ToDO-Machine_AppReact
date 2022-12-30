@@ -12,32 +12,42 @@ import { CreateModal } from "../modals/create/CreateTodoModal";
 import {CreateTodoForm} from '../CreateTodoForm/CreateTodoForm';
 
 function AppUI(){
- const {searchedTodos, 
+ const {searchValue,
+        searchedTodos, 
         togleCompletedTodo,
         deleteModalOn,
         togledeleteTodo,
         createModalOn
        } = React.useContext(Contex)
+       let render
+
+       if(searchValue.length > 0 && searchedTodos.length === 0){
+        render = <p className="aviso-text">no hay coincidencias</p>
+       }
+       else if(searchValue.length === 0 && searchedTodos.length === 0){
+       render =  <p className="aviso-text">Agrega tu primer ToDo</p>
+       }
+       else{
+      render = searchedTodos.map(todo =>(
+      <TodoItem
+        key = {todo.title}
+        text = {todo.title}
+        description = {todo.description}
+        completed = {todo.completed}
+        delete = {todo.delete}
+        togleCompleted = {()=> togleCompletedTodo(todo.title)}
+        togleDelete = {()=> togledeleteTodo(todo.title)}
+      />
+       )
+       )
+      }
  return(
   <React.Fragment>
    <TodoLogos/>
    <TodoCounter/>
    <TodoSearch/>
    <TodoList>
-    {
-     searchedTodos.map(todo =>(
-    <TodoItem
-      key = {todo.title}
-      text = {todo.title}
-      description = {todo.description}
-      completed = {todo.completed}
-      delete = {todo.delete}
-      togleCompleted = {()=> togleCompletedTodo(todo.title)}
-      togleDelete = {()=> togledeleteTodo(todo.title)}
-    />
-     )
-     )
-    }
+    {render}
    </TodoList>
    {deleteModalOn &&(
     <ConfirmModal>
