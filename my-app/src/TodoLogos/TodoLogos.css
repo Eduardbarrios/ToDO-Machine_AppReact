@@ -1,0 +1,72 @@
+.big-logo{
+ display: none;
+ position: fixed;
+ left: 30px;
+}
+
+.short-logo-section{
+ display: flex;
+ justify-content: center;
+}
+.short-logo{
+ display: flex;
+ width: 80%;
+ justify-content: center;
+}
+.logo-todo{
+ display: flex;
+}
+@media (min-width: 700px) and (max-width:850px){
+ .big-logo{
+  display: flex;
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  width: 45%;
+ }
+ .big-logo .logo-text{
+  width: 100%;
+ }
+ .big-logo .people-img{
+  position: fixed;
+  bottom: 45px;
+  right: 53%;
+ }
+
+}
+@media (min-width: 850px) and (max-width:1100px){
+ .big-logo{
+  display: flex;
+  position: fixed;
+  left: 30px;
+  width: 55%;
+ }
+ .big-logo .logo-text{
+  width: 90%;
+ }
+ .big-logo .people-img{
+  position: fixed;
+  bottom: 45px;
+  right: 43%;
+ }
+
+}
+
+@media (min-width: 1100px){
+ .big-logo{
+  display: flex;
+  position: fixed;
+  left: 30px;
+  width: 55%;
+  top: -40px;
+ }
+ .big-logo .logo-text{
+  width: 90%;
+ }
+ .big-logo .people-img{
+  position: fixed;
+  bottom: 0px;
+  right: 35%;
+ }
+
+}

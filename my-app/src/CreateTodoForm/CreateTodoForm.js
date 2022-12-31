@@ -19,14 +19,15 @@ function CreateTodoForm(){
  return(
   <section className="create-section">
    <h3 className="create-title">Agregar nuevo ToDo</h3>
-   <label for="title" className="title-text">Title:</label>
+   <label htmlFor="title" className="title-text">Title:</label>
    <input 
    className="title-in" 
    id="title"
    value={titleValue}
    onChange={onChangeTitleValue}
+   maxLength={30}
    />
-   <label for="description" className="description-text">Description:</label>
+   <label htmlFor="description" className="description-text">Description:</label>
    <input 
    id="description" 
    className="description-in"

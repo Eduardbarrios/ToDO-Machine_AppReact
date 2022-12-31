@@ -99,6 +99,8 @@ function TodoProvider(props){
     else{
       modal.className = 'create-modal';
     }
+    setTitleValue('');
+    setDescriptionValue('');
    }
    const [titleValue, setTitleValue] = React.useState('')
    const [descriptionValue, setDescriptionValue] = React.useState('')

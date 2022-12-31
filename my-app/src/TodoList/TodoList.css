@@ -1,3 +1,23 @@
 ul{
  list-style: none;
 }
+.list-section{
+ max-height:250px;
+ overflow-y: auto;
+ width: 95%;
+ align-self: center;
+ margin-bottom: 60px;
+}
+.list-section::-webkit-scrollbar {
+ width: 8px;
+}
+
+.list-section::-webkit-scrollbar-track {
+ background: var(--todo-second-color);
+ border-radius: 20px;
+}
+
+.list-section::-webkit-scrollbar-thumb {
+ background-color: rgb(105, 105, 106);    /* color of the scroll thumb */
+ border-radius: 50px;     /* creates padding around scroll thumb */
+}

@@ -1,6 +1,6 @@
 :root{
-  --main-bg-color: rgb(126, 126, 126);
-  --todo-card-color:rgb(93, 93, 93); 
+  --main-bg-color: rgba(84, 84, 84, 0.467);
+  --todo-second-color:rgba(97, 97, 97, 0.545); 
  }
 
 *{
@@ -14,15 +14,14 @@ html{
 
 .main-container{
   display: flex;
-  position: relative;
-  display: flex;
   position: absolute;
   flex-direction: column;
-  width: 30%;
-  min-width: 270px;
-  height: fit-content;
+  width: 25%;
+  min-width: 320px;
+  height: max-content;
   min-height: 500px;
-  right: 30px;
+  max-height: 80%;
+  right: 8%;
   top: 30px;
 }
 .second-container{
@@ -30,7 +29,6 @@ html{
   position: absolute;
   flex-direction: column;
   width: 100%;
-  min-width: 270px;
   height: fit-content;
   min-height: 500px;
   background-color: var(--main-bg-color);
@@ -61,4 +59,13 @@ html{
  }
  .inactive{
   display: flex;
+ }
+ @media (max-width: 700px){
+  .main-container{
+    display: flex;
+    width:320px;
+    right: calc(50% - 170px);
+
+  }
+ 
  }

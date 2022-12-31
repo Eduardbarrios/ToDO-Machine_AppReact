@@ -6,7 +6,7 @@ function TodoItem(props){
   const [
     detail, 
     setDetail,
-    togleCompletedTodo] = React.useState()
+    ] = React.useState()
   const onDetail = ()=>{
     if(!detail){
     setDetail(true)

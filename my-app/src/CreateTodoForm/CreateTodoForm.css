@@ -9,6 +9,7 @@
  padding: 5px;
  border-radius: 10px;
  cursor: default;
+ top: 40px;
 }
 .create-title{
  font-size: 2.2rem;
@@ -24,14 +25,16 @@
  
 }
 
-.input{
- width: 80%;
+.title-in, .description-in{
+ width: 90%;
  align-self: center;
  margin: 10px;
+ border-radius: 7px;
+ border: 1px solid black;
 }
 
 .cancelC{
- width: 28%;
+ width: 60px;
  position: absolute;
  bottom: 8px;
  right: 73px;
@@ -39,7 +42,7 @@
 
 }
 .confirmC{
- width: 25%;
+ width: 60px;
  position: absolute;
  bottom: 8px;
  right: 8px;

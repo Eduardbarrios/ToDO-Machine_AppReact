@@ -22,7 +22,7 @@ function AppUI(){
        let render
 
        if(searchValue.length > 0 && searchedTodos.length === 0){
-        render = <p className="aviso-text">no hay coincidencias</p>
+        render = <p className="aviso-text">No hay coincidencias</p>
        }
        else if(searchValue.length === 0 && searchedTodos.length === 0){
        render =  <p className="aviso-text">Agrega tu primer ToDo</p>

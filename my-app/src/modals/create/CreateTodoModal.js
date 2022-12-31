@@ -1,9 +1,4 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { Contex } from '../../contex/contex';
-
-
-const {createModalOn}= React.createContext(Contex);
 
 
 function CreateModal({children}){

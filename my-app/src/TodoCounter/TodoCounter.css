@@ -1,0 +1,8 @@
+.todo-counter{
+ position: relative;
+ align-self: center;
+ width: 90%;
+ text-align: center;
+ font-size: 2.5rem;
+ top: -20px;
+}
