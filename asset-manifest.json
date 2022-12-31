@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ToDO-Machine_AppReact/my-app/static/css/main.a2120acc.css",
+    "main.js": "/ToDO-Machine_AppReact/my-app/static/js/main.b32caf50.js",
+    "static/media/people.svg": "/ToDO-Machine_AppReact/my-app/static/media/people.37a82602168c83911e7483a155aea884.svg",
+    "static/media/Todo-logo-text.svg": "/ToDO-Machine_AppReact/my-app/static/media/Todo-logo-text.ef2e2e12bd659b6b7b65d5dc6d4f41ba.svg",
+    "static/media/check_on.svg": "/ToDO-Machine_AppReact/my-app/static/media/check_on.5c64a546eae26bafed5d.svg",
+    "static/media/ToDo-logo.svg": "/ToDO-Machine_AppReact/my-app/static/media/ToDo-logo.5b9cf197ba3b54a36da351ffa35381e8.svg",
+    "static/media/caution.svg": "/ToDO-Machine_AppReact/my-app/static/media/caution.c0ade55b6b695d0c0bdf.svg",
+    "static/media/delete.svg": "/ToDO-Machine_AppReact/my-app/static/media/delete.bd12f74d0d33ec040ed2.svg",
+    "static/media/ToDo-check.svg": "/ToDO-Machine_AppReact/my-app/static/media/ToDo-check.b2f526feea4cac603223c426d096eeaf.svg",
+    "static/media/cuadro_check.svg": "/ToDO-Machine_AppReact/my-app/static/media/cuadro_check.751dd1cc7cf3af222e89.svg",
+    "static/media/down.svg": "/ToDO-Machine_AppReact/my-app/static/media/down.2784a1986463460eefb7.svg",
+    "index.html": "/ToDO-Machine_AppReact/my-app/index.html",
+    "main.a2120acc.css.map": "/ToDO-Machine_AppReact/my-app/static/css/main.a2120acc.css.map",
+    "main.b32caf50.js.map": "/ToDO-Machine_AppReact/my-app/static/js/main.b32caf50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2120acc.css",
+    "static/js/main.b32caf50.js"
+  ]
+}
